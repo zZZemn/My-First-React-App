@@ -13,16 +13,13 @@ const ProfileComponent = () => {
       })
       .catch((error) => {
         if (error.response) {
-          // The request was made, but the server responded with a status code outside the range of 2xx
           console.log(
             "Data request failed with status code:",
             error.response.status
           );
         } else if (error.request) {
-          // The request was made, but no response was received
           console.log("No response received from the server.");
         } else {
-          // Something happened in setting up the request
           console.error("Error in making the request:", error.message);
         }
       });
